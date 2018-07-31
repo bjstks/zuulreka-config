@@ -1,0 +1,6 @@
+include 'components:zuul'
+include 'components:eureka'
+include 'components:cloud-config'
+include 'components:netflix-protected'
+
+rootProject.name = 'zuulreka-config'

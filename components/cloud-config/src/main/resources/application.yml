@@ -1,0 +1,9 @@
+server:
+  port: 9999
+
+spring:
+  profiles:
+    active: native
+  output:
+    ansi:
+      enabled: always

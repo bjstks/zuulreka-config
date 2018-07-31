@@ -1,0 +1,6 @@
+zuul:
+  routes:
+    protected:
+      stripPrefix: false
+      path: /netflix-protected/**
+      serviceId: netflix-protected
