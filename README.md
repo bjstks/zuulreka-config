@@ -8,12 +8,19 @@
 #### Run
 + Start each component in this order - waiting on the previous component to be completely started:
   + eureka component 
+
      `cd components/eureka && ./gradlew clean bootrun`
+
   + cloud-config component _(wait for eureka to start)_
+     
      `cd components/cloud-config && ./gradlew clean bootrun`
+
   + zuul component _(wait for cloud-config to start)_
+     
      `cd components/zuul && ./gradlew clean bootrun`
+
   + netflix-protected _(wait for cloud-config to start)_
+
      `cd components/netflix-protected && ./gradlew clean bootrun`
 
 #### Verification
