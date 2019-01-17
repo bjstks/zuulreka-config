@@ -1,0 +1,7 @@
+applications:
+- name: zuul
+  buildpacks:
+  - java_buildpack_offline
+  path: build/libs/zuul-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry

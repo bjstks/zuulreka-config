@@ -14,4 +14,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://localhost:8282}/eureka
