@@ -1,0 +1,8 @@
+applications:
+- name: netflix-protected
+  buildpacks:
+  - java_buildpack_offline
+  path: build/libs/netflix-protected-0.0.1-SNAPSHOT.jar
+  services:
+  - config-server
+  - service-registry

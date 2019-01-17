@@ -26,6 +26,7 @@ repositories {
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:2.0.1.RELEASE"
     }
 }
 
@@ -36,7 +37,8 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-actuator',
             'org.springframework.cloud:spring-cloud-starter-config',
-            'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+            'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
+            'io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

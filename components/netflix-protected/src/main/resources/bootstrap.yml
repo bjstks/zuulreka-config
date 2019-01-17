@@ -1,13 +1,11 @@
 server:
   port: 8181
-  servlet:
-    context-path: /netflix-protected
 spring:
   application:
     name: netflix-protected
   cloud:
     config:
-      uri: http://localhost:9999
+      uri: ${vcap.services.config-server.credentials.uri:http://localhost:9999}
   output:
     ansi:
       enabled: always
@@ -15,4 +13,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://localhost:8282}/eureka

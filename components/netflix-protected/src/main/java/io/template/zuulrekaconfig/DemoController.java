@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-  @Value("${external.property}")
+  @Value("${external.property:n/a}")
   String property;
 
   @GetMapping("/hello")
