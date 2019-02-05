@@ -1,8 +1,19 @@
+server:
+  port: 9999
+
 spring:
   application:
     name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${user.home}/workspace/zuulreka-config/configurations
+  output:
+    ansi:
+      enabled: always
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      defaultZone: ${EUREKA_HOST:http://localhost:8282}/eureka

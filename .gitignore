@@ -8,3 +8,4 @@
 *.iml
 *.ipr
 /out/
+/.java-version
