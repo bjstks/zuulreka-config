@@ -1,7 +1,5 @@
 server:
   port: 8181
-  servlet:
-    context-path: /netflix-protected
 spring:
   application:
     name: netflix-protected
